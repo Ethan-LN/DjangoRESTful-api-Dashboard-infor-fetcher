@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,10 +22,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-mp27sngh)ab=#!22rbok9frba*_epqc7otm!x9m!!c@my@jkb3'
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config('DEBUG', default = False, cast = bool)
 
 ALLOWED_HOSTS = ['*']
 
@@ -81,7 +82,7 @@ WSGI_APPLICATION = 'dashboardInforAPI.wsgi.application'
 # 		'ENGINE': 'django.db.backends.mysql',
 # 		'NAME': 'db_users',
 # 		'USER': 'root',
-# 		'PASSWORD': '@MYSQL39225487op',
+# 		'PASSWORD': '',
 # 		'HOST':'localhost',
 # 		'PORT':'3306',
 # 	}
