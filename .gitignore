@@ -1,0 +1,16 @@
+# Ignore compiled Python files
+*.pyc
+
+# Ignore database file
+db.sqlite3
+
+# Ignore the .env
+.env
+
+# Ignore Django app specific files and directories
+dashboard_app/__pycache__/
+dashboard_app/migrations/
+dashboard_app/media/
+dashboard_app/*.pyc
+dashboardInforAPI/__pycache__/
+dashboardInforAPI/*.pyc
