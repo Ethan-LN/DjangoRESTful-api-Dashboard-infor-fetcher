@@ -77,16 +77,18 @@ WSGI_APPLICATION = 'dashboardInforAPI.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 
-# DATABASES = {
-# 	'default': {
-# 		'ENGINE': 'django.db.backends.mysql',
-# 		'NAME': 'db_users',
-# 		'USER': 'root',
-# 		'PASSWORD': '',
-# 		'HOST':'localhost',
-# 		'PORT':'3306',
-# 	}
-# }
+DATABASES = {
+	'default': {
+		'ENGINE': 'django.db.backends.mysql',
+		'NAME': config('mysql_name'),
+		'USER': config('mysql_user'),
+		'PASSWORD': config('mysql_password'),
+		'HOST':config('mysql_host'),
+		'PORT':'3306',
+	},
+}
+
+
 
 
 # Password validation
