@@ -8,9 +8,10 @@ else
 fi
 
 echo $PWD
-source env/bin/activate
+. env/bin/activate
+echo $PWD
 
-sudo pip install -r requirements.txt
+pip install -r requirements.txt
 
 if [ -d "logs" ]; then
     echo "Log folder exists"
