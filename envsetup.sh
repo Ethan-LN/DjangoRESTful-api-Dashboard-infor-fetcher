@@ -1,20 +1,18 @@
 ##set up enviroment for python 
 #!/bin/bash
 
-#!/bin/bash
-
-if [[ -d "env" ]]; then
+if [ -d "env" ]; then
     echo "Python virtual env exists"
 else
     sudo python3.10 -m venv env
-fi  
+fi
 
 echo $PWD
 source env/bin/activate
 
-pip install -r requirements.txt
+sudo pip install -r requirements.txt
 
-if [[ -d "logs" ]]; then
+if [ -d "logs" ]; then
     echo "Log folder exists"
 else
     mkdir logs
