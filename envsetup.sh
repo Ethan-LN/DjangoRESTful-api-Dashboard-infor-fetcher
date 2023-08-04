@@ -5,13 +5,13 @@ if [-d "env"]
 then
  echo "Python virtual env  exists"
 else
-    python3.10 -m venv env
+    sudo python3.10 -m venv env
 fi  
 
 echo $PWD
 source env/bin/activate
 
-pip3.10 install -r requirements.txt
+pip install -r requirements.txt
 
 if [-d "logs"]
 then
