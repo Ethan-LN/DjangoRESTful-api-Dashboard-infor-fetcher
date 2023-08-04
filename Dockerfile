@@ -11,7 +11,7 @@ RUN pip3.10 install --upgrade pip --no-cache-dir
 RUN pip3.10 install -r requirements.txt --no-cache-dir
 
 # Copy the Django app code to the container
-COPY . /app/
+COPY ./app/. /app/
 
 #CMD ["python3.10","manage.py","runserver", "0.0.0.0:8000"]
 CMD ["gunicorn", "dashboardInforAPI.wsgi:application", "--bind", "0.0.0.0:8000"]
