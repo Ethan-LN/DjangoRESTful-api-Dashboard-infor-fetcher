@@ -3,7 +3,7 @@ Django==4.2.4
 djangorestframework==3.14.0
 dnspython==2.4.1
 gunicorn==21.2.0
-mysqlclient==2.2.0
+#mysqlclient==2.2.0
 packaging==23.1
 pymongo==4.4.1
 PyMySQL==1.1.0
