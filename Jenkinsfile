@@ -7,15 +7,15 @@ pipeline {
                 chmod +x envsetup.sh
                 ./envsetup.sh
                 '''
-                }
-
+            }
+        }
         stage('Setup Gunicon') {
             steps {
                 sh '''
                 chmod +x gunicorn.sh
                 ./gunicorn.sh
                 '''
-                }
-        }
+            }
         }
     }
+}
