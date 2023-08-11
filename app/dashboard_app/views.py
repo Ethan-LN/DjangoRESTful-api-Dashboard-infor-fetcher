@@ -13,7 +13,7 @@ from bson import ObjectId
 def home(request):
     return render(request,"home.html",{})
 
-class StaffListCreatViews(generics.ListCreateAPIView):
+class StaffListCreateViews(generics.ListCreateAPIView):
     queryset = Staff.objects.all()
     serializer_class = StaffSerializer
 
