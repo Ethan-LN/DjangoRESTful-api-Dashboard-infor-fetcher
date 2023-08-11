@@ -118,7 +118,8 @@ REST_FRAMEWORK = {
 
 CORS_ALLOW_ALL_ORIGINS = False
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",  # Example: for development
+    config('LOCAL_URL'),  # Example: for development
+    config('FRONTEND_SERVER')
 ]
 
 
